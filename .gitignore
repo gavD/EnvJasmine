@@ -1,2 +1,3 @@
 *.swp
 .svn
+include/conf.js
