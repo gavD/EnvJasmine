@@ -158,3 +158,8 @@ bc. ./tests/EnvJasmine/bin/run_test.sh --configFile=</absolute/path/to/demo/test
 That's it! For more help on Jasmine docs at https://github.com/pivotal/jasmine/wiki
 
 Please contact Trevor Lalish-Menagh through github (https://github.com/trevmex) with any defects or feature requests!
+
+h2. Running for any project
+
+Use bin/jasmine-test.sh in your project. My default, it will run all tests in "spec/*.spec.js" and will
+use "src" to look up source code. You can override these - see the file itself for details
