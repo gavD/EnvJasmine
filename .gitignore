@@ -1,3 +1,8 @@
 *.swp
 .svn
 include/conf.js
+rpmbuild/BUILD/*
+rpmbuild/BUILDROOT/*
+rpmbuild/RPMS/*
+rpmbuild/SOURCES/*
+rpmbuild/SRPMS/*

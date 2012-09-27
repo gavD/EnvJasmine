@@ -1,6 +1,8 @@
 h1. EnvJasmine: Jasmine test runner for EnvJS. !https://secure.travis-ci.org/trevmex/EnvJasmine.png!
 
-EnvJasmine allows you to run headless JavaScript tests.
+EnvJasmine allows you to run headless JavaScript tests. This is a fork that supports installation
+as a standalone tool, and also installation via RPM for easier provisioning of RedHat/CentOS/Fedora
+systems.
 
 h2. Creating New Specs
 
@@ -159,12 +161,14 @@ That's it! For more help on Jasmine docs at https://github.com/pivotal/jasmine/w
 
 Please contact Trevor Lalish-Menagh through github (https://github.com/trevmex) with any defects or feature requests!
 
+h1. Box UK modifications
+
 h2. Running for any project
 
 Use bin/jasmine-test.sh in your project. My default, it will run all tests in "spec/*.spec.js" and will
 use "src" to look up source code. You can override these - see the file itself for details
 
-h2. Installing
+h2. Installing for standalone use
 
 make a file, /usr/bin/jasmine-test, that contains something like:
 
@@ -178,4 +182,26 @@ have an ant task like:
     <target name="test-js" description="Run unit tests in Jasmine format">
         <exec executable="jasmine-test" />
     </target>
+
+h1. RPM build and installation
+
+h2. Building the RPM
+
+A helper script, "rpmbuild/builder.sh", might work for you, YMMV.
+
+h2. Installing the RPM
+
+    # Make sure it's not installed, remove it if it is
+    yes | sudo yum remove envjasmine
+    # Install it. Version numbers may vary.
+    yes | sudo yum install --nogpgcheck envjasmine-1-1.noarch.rpm
+    # Have a quick look at the directory tree. Optional. Requires tree to be
+    # installed.
+    tree /opt/envjasmine
+
+h2. Using the RPM version
+
+Add /opt/envjasmine/bin to your path. Then, you can do something like:
+
+    jasmine-test.sh /vagrant/kanbanise-redmine/src /vagrant/kanbanise-redmine/spec/*.spec.js
 
