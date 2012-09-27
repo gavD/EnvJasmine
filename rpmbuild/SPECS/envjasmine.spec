@@ -54,7 +54,7 @@ touch $RPM_BUILD_ROOT/opt/envjasmine/include/conf.js
 chmod 666 $RPM_BUILD_ROOT/opt/envjasmine/include/conf.js
 
 %clean
-rm -rf $RPM_BUILD_ROOTa
+rm -rf $RPM_BUILD_ROOT
 
 %post
 echo " "
