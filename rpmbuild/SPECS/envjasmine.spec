@@ -6,7 +6,7 @@ Source0: %{name}-%{version}.tar.gz
 License: MIT
 Group: MyJunk
 BuildArch: noarch
-#BuildRoot: %{_tmppath}/%{name}-buildroot
+BuildRoot: %{_tmppath}/%{name}-buildroot
 
 Requires: rhino >= 1.5
 Requires: java-1.6.0-openjdk
