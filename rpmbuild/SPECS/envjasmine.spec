@@ -56,6 +56,7 @@ rm -rf $RPM_BUILD_ROOT
 echo "pushd /opt/envjasmine/bin" > /usr/bin/jasmine-test
 echo "./jasmine-test.sh $@" >> /usr/bin/jasmine-test
 echo "popd" >> /usr/bin/jasmine-test
+chmod a+x /usr/bin/jasmine-test
 
 echo " "
 echo "EnvJasmine runner installed!"
