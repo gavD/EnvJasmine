@@ -53,6 +53,7 @@ install -D lib/spanDir/* $RPM_BUILD_ROOT/opt/envjasmine/lib/spanDir/
 rm -rf $RPM_BUILD_ROOT
 
 %post
+ln -s /opt/envjasmine/bin/jasmine-test /usr/bin/jasmine-test
 echo " "
 echo "EnvJasmine runner installed!"
 
@@ -60,6 +61,3 @@ echo "EnvJasmine runner installed!"
 %defattr(-,root,root,-)
 %dir /opt/envjasmine
 /opt/envjasmine
-
-%post
-ln -s /opt/envjasmine/bin/jasmine-test /usr/bin/jasmine-test
