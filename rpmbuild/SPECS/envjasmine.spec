@@ -60,3 +60,6 @@ echo "EnvJasmine runner installed!"
 %defattr(-,root,root,-)
 %dir /opt/envjasmine
 /opt/envjasmine
+
+%post
+ln -s /opt/envjasmine/bin/jasmine-test /usr/bin/jasmine-test
