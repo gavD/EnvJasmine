@@ -1,12 +1,12 @@
 Summary: Command line runnable version of EnvJasmine that takes two arguments - source and test
 Name: envjasmine
 Version: 1
-Release: 1
-Source0: envjasmine-1.tar.gz
+Release: 2
+Source0: %{name}-%{version}.tar.gz
 License: MIT
 Group: MyJunk
 BuildArch: noarch
-BuildRoot: %{_tmppath}/%{name}-buildroot
+#BuildRoot: %{_tmppath}/%{name}-buildroot
 
 Requires: rhino >= 1.5
 Requires: java-1.6.0-openjdk
@@ -49,10 +49,6 @@ install -D lib/jasmine-rhino-reporter/* $RPM_BUILD_ROOT/opt/envjasmine/lib/jasmi
 install -D lib/rhino/* $RPM_BUILD_ROOT/opt/envjasmine/lib/rhino/
 install -D lib/spanDir/* $RPM_BUILD_ROOT/opt/envjasmine/lib/spanDir/
 
-# Install blank configuration file
-touch $RPM_BUILD_ROOT/opt/envjasmine/include/conf.js
-chmod 666 $RPM_BUILD_ROOT/opt/envjasmine/include/conf.js
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -61,6 +57,6 @@ echo " "
 echo "EnvJasmine runner installed!"
 
 %files
+%defattr(-,root,root,-)
 %dir /opt/envjasmine
 /opt/envjasmine
-

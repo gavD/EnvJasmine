@@ -15,5 +15,5 @@ EnvJasmine.jsDir = EnvJasmine.rootDir + "/samples/"; // TODO: Change this to you
 
 EnvJasmine.loadGlobal(EnvJasmine.includeDir + "jquery-1.4.4.js"); // for example, load jquery.
 
-EnvJasmine.loadGlobal(EnvJasmine.rootDir + '/include/conf.js');
+EnvJasmine.loadGlobal('/tmp/conf.js');
 // TODO: Add your own

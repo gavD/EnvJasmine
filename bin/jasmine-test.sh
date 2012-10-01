@@ -15,6 +15,7 @@
 #   => This would execute all tests in `pwd`/spec/*.spec.js with sources (files to
 #      test) in `pwd`/src
 #
+# There is no Windows equivalent for this command
 srcdir="`pwd`/src" # default source dir
 tests="`pwd`/spec/*.spec.js" # default tests to run
 DIR="$( cd -P "$( dirname "${BASH_SOURCE[0]}" )" && pwd )" # Absolute dir of this file
@@ -30,5 +31,5 @@ fi
 
 echo JS src is $srcdir
 echo Spec files glob is $tests
-echo "EnvJasmine.jsDir = '$srcdir/';" > $DIR/../include/conf.js
+echo "EnvJasmine.jsDir = '$srcdir/';" > /tmp/conf.js
 $DIR/run_all_tests.sh $tests
