@@ -4,7 +4,7 @@ Version: 1
 Release: 2
 Source0: %{name}-%{version}.tar.gz
 License: MIT
-Group: MyJunk
+Group: Development/Libraries
 BuildArch: noarch
 BuildRoot: %{_tmppath}/%{name}-buildroot
 
