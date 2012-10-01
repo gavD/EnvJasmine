@@ -53,7 +53,10 @@ install -D lib/spanDir/* $RPM_BUILD_ROOT/opt/envjasmine/lib/spanDir/
 rm -rf $RPM_BUILD_ROOT
 
 %post
-ln -s /opt/envjasmine/bin/jasmine-test.sh /usr/bin/jasmine-test
+echo "pushd /opt/envjasmine/bin" > /usr/bin/jasmine-test
+echo "./jasmine-test.sh $@" >> /usr/bin/jasmine-test
+echo "popd" >> /usr/bin/jasmine-test
+
 echo " "
 echo "EnvJasmine runner installed!"
 
