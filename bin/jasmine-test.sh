@@ -32,4 +32,5 @@ fi
 echo JS src is $srcdir
 echo Spec files glob is $tests
 echo "EnvJasmine.jsDir = '$srcdir/';" > /tmp/conf.js
+#echo "EnvJasmine.reporterClass = JUnitReporter;" >> /tmp/conf.js
 $DIR/run_all_tests.sh $tests
